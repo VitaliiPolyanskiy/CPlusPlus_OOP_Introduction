@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29503.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4. Clock(class)", "Clock\Clock.vcxproj", "{653F7CB1-6CD2-48EA-9F66-ACC3BF1DE588}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "1. Clock (only functions)", "Clock (only functions)\Clock (only functions).vcxproj", "{B2348AD6-6218-4D50-B072-BDD78BC0FD05}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2. Clock (struct and functions)", "Clock (struct and functions)\Clock (struct and functions).vcxproj", "{0674DD66-109B-4ABD-8325-048DD3586A9F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3. Clock(StepToOOP)", "Clock(StepToOOP)\Clock(StepToOOP).vcxproj", "{2CEDC023-08EF-474C-B0C7-8C3B2E62A2D7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "5. Clock(Many files)", "Clock(Many files)\Clock(Many files).vcxproj", "{03398C44-8CF9-48D9-A114-C039395F4F17}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{653F7CB1-6CD2-48EA-9F66-ACC3BF1DE588}.Debug|Win32.ActiveCfg = Debug|Win32
+		{653F7CB1-6CD2-48EA-9F66-ACC3BF1DE588}.Debug|Win32.Build.0 = Debug|Win32
+		{653F7CB1-6CD2-48EA-9F66-ACC3BF1DE588}.Release|Win32.ActiveCfg = Release|Win32
+		{653F7CB1-6CD2-48EA-9F66-ACC3BF1DE588}.Release|Win32.Build.0 = Release|Win32
+		{B2348AD6-6218-4D50-B072-BDD78BC0FD05}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B2348AD6-6218-4D50-B072-BDD78BC0FD05}.Debug|Win32.Build.0 = Debug|Win32
+		{B2348AD6-6218-4D50-B072-BDD78BC0FD05}.Release|Win32.ActiveCfg = Release|Win32
+		{B2348AD6-6218-4D50-B072-BDD78BC0FD05}.Release|Win32.Build.0 = Release|Win32
+		{0674DD66-109B-4ABD-8325-048DD3586A9F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0674DD66-109B-4ABD-8325-048DD3586A9F}.Debug|Win32.Build.0 = Debug|Win32
+		{0674DD66-109B-4ABD-8325-048DD3586A9F}.Release|Win32.ActiveCfg = Release|Win32
+		{0674DD66-109B-4ABD-8325-048DD3586A9F}.Release|Win32.Build.0 = Release|Win32
+		{2CEDC023-08EF-474C-B0C7-8C3B2E62A2D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2CEDC023-08EF-474C-B0C7-8C3B2E62A2D7}.Debug|Win32.Build.0 = Debug|Win32
+		{2CEDC023-08EF-474C-B0C7-8C3B2E62A2D7}.Release|Win32.ActiveCfg = Release|Win32
+		{2CEDC023-08EF-474C-B0C7-8C3B2E62A2D7}.Release|Win32.Build.0 = Release|Win32
+		{03398C44-8CF9-48D9-A114-C039395F4F17}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03398C44-8CF9-48D9-A114-C039395F4F17}.Debug|Win32.Build.0 = Debug|Win32
+		{03398C44-8CF9-48D9-A114-C039395F4F17}.Release|Win32.ActiveCfg = Release|Win32
+		{03398C44-8CF9-48D9-A114-C039395F4F17}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC37FEF1-BB5A-4197-926A-9976B9537DA6}
+	EndGlobalSection
+EndGlobal
