@@ -39,28 +39,25 @@ void InputTime(Clock & clk)
 	scanf_s("%d", &clk.seconds);
 }
 
+void Print(Clock clk)
+{
+	char buf[100] = { 0 };
+	sprintf_s(buf, "%2.2d:%2.2d:%2.2d", clk.hours, clk.minutes, clk.seconds);
+	system("cls");
+	printf(buf);
+}
+
 int main()
 {
 	Clock clk;
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD cur;
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = false;
-	info.dwSize = 10;
-	SetConsoleCursorInfo(handle, &info);
-	cur.X = 36;
-	cur.Y = 10;
 	while (true)
 	{
 		while (!_kbhit())
 		{
 			Tick(clk);
-			char buf[100] = { 0 };
-			sprintf_s(buf, "%2.2d:%2.2d:%2.2d", clk.hours, clk.minutes, clk.seconds);
-			system("cls");
-			SetConsoleCursorPosition(handle, cur);
-			printf(buf);
+			Print(clk);
 			Sleep(1000);
+			system("cls");
 		}
 		char result = _getch();
 		if (result == 't')

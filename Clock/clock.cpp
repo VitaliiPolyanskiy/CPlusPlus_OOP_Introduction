@@ -9,22 +9,13 @@ class Clock
 	int minutes = 0;
 
 public:
-
-	int getHours()
+	void Print()
 	{
-		return hours;
+		char buf[100] = { 0 };
+		sprintf_s(buf, "%2.2d:%2.2d:%2.2d", hours, minutes, seconds);
+		system("cls");
+		printf(buf);
 	}
-
-	int getMinutes()
-	{
-		return minutes;
-	}
-
-	int getSeconds()
-	{
-		return seconds;
-	}
-
 	void Tick()
 	{
 		seconds++;
@@ -43,7 +34,6 @@ public:
 			}
 		}
 	}
-
 	void InputTime()
 	{
 		system("cls");
@@ -59,28 +49,14 @@ public:
 int main()
 {
 	Clock clk;
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD cur;
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = false;
-	info.dwSize = 10;
-	SetConsoleCursorInfo(handle, &info);
-	cur.X = 36;
-	cur.Y = 10;
 	while(true)
 	{
 		while(!_kbhit())
 		{
 			clk.Tick();
-			char buf[100] = {0};
-			int h = clk.getHours();
-			int m = clk.getMinutes();
-			int s = clk.getSeconds();
-			sprintf_s(buf, "%2.2d:%2.2d:%2.2d", h, m, s);
-			system("cls");
-			SetConsoleCursorPosition(handle, cur);
-			printf(buf);
+			clk.Print();
 			Sleep(1000);
+			system("cls");
 		}
 		char result = _getch();
 		if(result == 't')

@@ -31,31 +31,27 @@ void InputTime(int &hours, int &minutes, int &seconds)
 	printf("Enter a seconds: ");
 	scanf_s("%d", &seconds);
 }
+void Print(int hours, int minutes, int seconds)
+{
+	char buf[100] = { 0 };
+	sprintf_s(buf, "%2.2d:%2.2d:%2.2d", hours, minutes, seconds);
+	system("cls");
+	printf(buf);
+}
 
 int main()
 {
 	int hours = 0;
 	int seconds = 0;
 	int minutes = 0;
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD cur;
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = false;
-	info.dwSize = 10;
-	SetConsoleCursorInfo(handle, &info);
-	cur.X = 36;
-	cur.Y = 10;
 	while (true)
 	{
 		while (!_kbhit())
 		{
 			Tick(hours, minutes, seconds);
-			char buf[100] = { 0 };
-			sprintf_s(buf, "%2.2d:%2.2d:%2.2d", hours, minutes, seconds);
-			system("cls");
-			SetConsoleCursorPosition(handle, cur);
-			printf(buf);
+			Print(hours, minutes, seconds);			
 			Sleep(1000);
+			system("cls");
 		}
 		char result = _getch();
 		if (result == 't')

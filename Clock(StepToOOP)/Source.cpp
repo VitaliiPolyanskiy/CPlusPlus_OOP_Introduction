@@ -7,7 +7,6 @@ struct Clock
 	int hours = 0;
 	int seconds = 0;
 	int minutes = 0;
-
 	void Tick()
 	{
 		seconds++;
@@ -26,7 +25,6 @@ struct Clock
 			}
 		}
 	}
-
 	void InputTime()
 	{
 		system("cls");
@@ -37,30 +35,26 @@ struct Clock
 		printf("Enter a seconds: ");
 		scanf_s("%d", &seconds);
 	}
+	void Print()
+	{
+		char buf[100] = { 0 };
+		sprintf_s(buf, "%2.2d:%2.2d:%2.2d", hours, minutes, seconds);
+		system("cls");
+		printf(buf);
+	}
 };
 
 int main()
 {
 	Clock clk;
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
-	COORD cur;
-	CONSOLE_CURSOR_INFO info;
-	info.bVisible = false;
-	info.dwSize = 10;
-	SetConsoleCursorInfo(handle, &info);
-	cur.X = 36;
-	cur.Y = 10;
 	while (true)
 	{
 		while (!_kbhit())
 		{
 			clk.Tick();
-			char buf[100] = { 0 };
-			sprintf_s(buf, "%2.2d:%2.2d:%2.2d", clk.hours, clk.minutes, clk.seconds);
-			system("cls");
-			SetConsoleCursorPosition(handle, cur);
-			printf(buf);
+			clk.Print();
 			Sleep(1000);
+			system("cls");
 		}
 		char result = _getch();
 		if (result == 't')
